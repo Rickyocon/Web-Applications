@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAC Calculator</title>
+    <link rel="stylesheet" href="BACstyle.css">
+</head>
+<body id="app" class="app-background">
+
+<form id="bacForm">
+    <h2>Blood Alcohol Content (BAC) Calculator</h2>
+    
+    <p>  
+	According to the Centers for Disease Control and Prevention (CDC), a standard drink 
+	contains 0.6 ounces of pure alcohol. 
+	<br><br>
+	• Safe level of drinking: 1 drink for women and up to 2 drinks for men. (drinker category: Light) 
+	<br>
+	• Low-risk drinking: No more than 3 drinks for women, and no more than 4 drinks for men. (drinker category: Moderate)
+	<br>	
+	• Binge drinking:  4 or more alcoholic drinks for females, and 5 or more alcoholic drinks for males (drinker category: Heavy) 
+	<br><br><br>
+	This interactive tool is designed to help you estimate your Blood Alcohol Content (BAC) level and understand the effects of alcohol consumption on your body based on the drinks you've had. Here’s how to use it:
+	</p>
+	<ol style="font-size:14px">
+	<li>Select Your Gender: Choose your gender by selecting the appropriate radio button. This information is used to more accurately calculate your BAC level.</li>
+	<li>Enter Your Weight: Type your weight in the box provided. You can specify the unit of measurement (pounds or kilograms) by selecting the corresponding radio button.</li>
+	<li>Time Since Last Drink: Input the time since your last drink. You have the option to specify this time in hours or minutes—just choose the unit that best applies.</li>
+	<li>Specify Drink Type: Use the dropdown menu to select the type of drink you've had. Options include beer, malt liquor, wine, and hard liquor.</li>
+	<li>Number of Ounces: Enter the total number of ounces of alcohol you've consumed. This helps in determining how many standard drinks your consumption equates to.</li>
+	<li>Calculate Your BAC: Once you've entered all the necessary information, click the "Calculate BAC" button to see your estimated BAC level and a categorization of your drinking level (Light, Moderate, or Heavy).</li>
+	<li>Reset Information: If you want to start over or calculate another scenario, simply click the "Reset" button to clear all inputs and results.</li>
+	</ol>
+    
+    <!-- Gender Selection -->
+    <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+    </fieldset>
+    
+	<div id="wrapperDiv">
+	
+    <!-- Weight Input -->
+	<div style="padding:20px;float:left">
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" name="weight" required>
+    <label><input type="radio" name="weightUnit" value="pounds" checked> Pounds</label>
+    <label><input type="radio" name="weightUnit" value="kilograms"> Kilograms</label>
+	</div>
+    
+    <!-- Time Since Last Drink -->
+	<div style="padding:20px;float:left">
+    <label for="timeSinceLastDrink">Time Since Last Drink:</label>
+    <input type="number" id="timeSinceLastDrink" name="timeSinceLastDrink" required>
+    <label><input type="radio" name="timeUnit" value="hours" checked> Hours</label>
+    <label><input type="radio" name="timeUnit" value="minutes"> Minutes</label>
+	</div>
+    
+    <!-- Drink Type -->
+	<div style="padding:20px;float:left">
+    <label for="drinkType">Drink Type:</label>
+    <select id="drinkType" name="drinkType" required>
+        <option value="beer">Beer</option>
+        <option value="maltLiquor">Malt Liquor</option>
+        <option value="wine">Wine</option>
+        <option value="hardLiquor">Hard Liquor</option>
+    </select>
+	</div>
+    
+    <!-- Number of Ounces -->
+	<div style="padding:20px;float:left">
+    <label for="ounces">Number of Ounces:</label>
+    <input type="number" id="ounces" name="ounces" required>
+	</div>
+	
+	</div>
+	
+	<div style="height:7px;width:7px;padding:20px;float:left">
+	<img src="assets/standeredDrink.png" alt="A photo that shows the standered drink levels" width="400">
+	</div>
+	
+    
+	<br><br><br><br><br><br><br><br><br><br><br>
+	
+    <!-- Calculate and Reset Buttons -->
+    <button type="button" id="calculateButton">Calculate BAC</button>
+    <button type="button" id="resetButton">Reset</button>
+	
+</form>
+
+<!-- BAC Result Display -->
+<div id="result"></div>
+
+<script src="BACscript.js"></script>
+</body>
+</html>

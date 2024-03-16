@@ -1,0 +1,34 @@
+html, body {
+    font-family: Arial, sans-serif;
+}
+
+.app-background {
+    background-color: DarkSlateGray;
+    color: Beige;
+}
+
+.light-drinking {
+    background-color: #bde0fe; /* Light blue */
+    color: #0353a4; /* Dark blue */
+}
+
+.moderate-drinking {
+    background-color: #fef9c3; /* Light yellow */
+    color: #946f00; /* Dark yellow */
+}
+
+.heavy-drinking {
+    background-color: Black;
+    color: #8b0000; /* Dark red */
+}
+
+fieldset, label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="number"], select {
+    margin-bottom: 20px;
+}
+
+
